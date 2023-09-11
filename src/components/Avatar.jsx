@@ -8,8 +8,8 @@ Command: npx gltfjsx@6.2.13 public/models/64ff5564b9f61ba631e48d02.glb
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF('/64ff5564b9f61ba631e48d02.glb')
+export function Avatar(props) {
+  const { nodes, materials } = useGLTF('models/64ff5564b9f61ba631e48d02.glb')
   return (
     <group {...props} dispose={null}>
       <primitive object={nodes.Hips} />
@@ -26,4 +26,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/64ff5564b9f61ba631e48d02.glb')
+useGLTF.preload('models/64ff5564b9f61ba631e48d02.glb')
